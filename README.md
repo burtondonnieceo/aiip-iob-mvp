@@ -1,36 +1,30 @@
-# AIIP-IOB-MVP
+# AIIP / Internet of Blockchains: early architecture
 
-This repository contains the Minimum Viable Product (MVP) implementation of the **AI-to-AI Interoperability Protocol (AIIP)** for the **Internet of Blockchains (IOB)**. The MVP demonstrates core functionality of the ecosystem by connecting multiple AI agents, enabling message translation, notarization, and governance checks across blockchain-inspired components.
+This repository preserves an early architecture outline for the AI-to-AI Interoperability Protocol (AIIP) and Internet of Blockchains work by Donnie Burton.
 
-## Overview
+**Repository status:** the public default branch contains this README only. The translator, ledger, gateway and console described below are components of the original design; their implementation is not included here. There is no runnable public demo or installation command in this repository.
 
-The MVP includes four main services:
+For the current public engineering index, see [Donnie Burton's ecosystem catalog](https://github.com/burtondonnieceo/burtondonnieceo/blob/main/CATALOG.md).
 
-- **Translator (FastAPI, port 8081)**  
-  Handles schema translation between systems (e.g., SysA → SysB). Includes telemetry for speculative decoding acceleration.
+## The original design
 
-- **Ledger (FastAPI, port 8082)**  
-  Demonstrates notarization with Ed25519 demo signatures. Stores message digests, validator sets, and optional speculative fields.
+The outline proposed four cooperating components:
 
-- **Gateway (FastAPI, port 8080)**  
-  Orchestrates flows between nodes, translator, and ledger. Performs SHA-256 digesting and submits commits to the ledger.
+| Component | Intended responsibility |
+| --- | --- |
+| Translator | Convert messages between participating systems' schemas |
+| Gateway | Coordinate message flow and submit message digests |
+| Ledger | Record message digests and demonstration signature metadata |
+| Console | Inspect registered nodes, messages and recorded entries |
 
-- **Console (React + Vite, port 5173)**  
-  A simple frontend for registering nodes, sending demo messages, checking status, and browsing ledger entries.
+The design explored cross-system AI messaging, governance checks and recorded evidence. Those goals do not establish a deployed blockchain network, verified AI-to-AI exchange, payment settlement or production service.
 
-## Goals
+## Historical evidence
 
-This MVP showcases how AIIP can serve as the **Internet of Intelligence**, bridging AI systems and blockchains. It is designed for:
+The [original README](https://github.com/burtondonnieceo/aiip-iob-mvp/blob/5fd8d562f09da058f4cafb3f8e2403d2823d5d7f/README.md) is preserved in Git history. This revision fixes its broken formatting and distinguishes the proposed architecture from the public repository's actual contents.
 
-- Demonstrating **cross-system message interoperability**  
-- Validating **Proof of Harmony & Governance (PoHG)** concepts  
-- Logging **telemetry and speculative decoding metrics**  
-- Laying the foundation for scalable multi-agent, multi-chain ecosystems  
+The original early AI-to-AI first-message receipt has not been recovered for this publication. Later handshake demonstrations are not substituted for that evidence, and this page makes no first-in-the-world or verified milestone-date claim.
 
-## Getting Started
+## Related work
 
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/YourUser/aiip-iob-mvp.git
-   cd aiip-iob-mvp
-
+[Internet of Intelligence](https://www.internet-of-intelligence.com/) is the broader product context. The public [decision-history](https://github.com/burtondonnieceo/burtondonnieceo/blob/main/docs/decision-history.md) and [skill-provenance](https://github.com/burtondonnieceo/burtondonnieceo/blob/main/docs/skill-provenance.md) notes explain more recent local engineering patterns and their limits.
